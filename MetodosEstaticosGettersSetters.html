@@ -28,6 +28,7 @@
                 //super() es un me´todo que llama el constructor de la clase padre
                 super(nombre, genero);
                 this.tamano = tamano;
+                this.raza = null;
             }
 
             sonar(){
@@ -38,7 +39,26 @@
                 console.log("Gua Gua");
             }
 
+            //Un método estatico se puede ejecutar sin 
+            //necesidad de instanciar la clase
+            static quienEres(){
+                console.log("Los perros somos animales mamiferos\
+                            que pertenecemos a la familia de los caninos\
+                            somos considerados los mejores amigos del hombre");
+            }
+
+            //Los setters y getters son metodos especificos que
+            //nos permiten establecer y obtener los valores de atributos de nuestra clase
+            get getRaza(){
+                return this.raza;
+            }
+
+            set setRaza(raza){
+                this.raza = raza;
+            }
         }
+
+        Perro.quienEres();
 
         const mini = new Animal("Mini", "Hembra"),
         scooby = new Perro("Scooby", "Macho", "Gigante");
@@ -50,9 +70,10 @@
         console.log(scooby);
         scooby.saludar();
         scooby.sonar();
-        scooby.ladrar();
-
-
+        scooby.ladrar(); 
+        console.log(scooby.getRaza);
+        scooby.setRaza = "Grán Danés"
+        console.log(scooby.getRaza);
     </script>
 </body>
 </html>
