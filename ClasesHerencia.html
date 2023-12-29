@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(nombre, genero){
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+
+            //Metodos
+            sonar(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+
+            saludar(){
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }         
+        
+        class Perro extends Animal{
+            constructor(nombre, genero, tamano){
+                //super() es un me´todo que llama el constructor de la clase padre
+                super(nombre, genero);
+                this.tamano = tamano;
+            }
+
+            sonar(){
+                console.log("Soy un perro y mi sonido es un ladrido");
+            }
+
+            ladrar(){
+                console.log("Gua Gua");
+            }
+
+        }
+
+        const mini = new Animal("Mini", "Hembra"),
+        scooby = new Perro("Scooby", "Macho", "Gigante");
+
+        console.log(mini);
+        mini.saludar();
+        mini.sonar();
+
+        console.log(scooby);
+        scooby.saludar();
+        scooby.sonar();
+
+
+    </script>
+</body>
+</html>
