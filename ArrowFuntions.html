@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Función declarada
+        function saludar() {
+            console.log("Hola");
+        }
+
+        //Función expresada
+       const saludar = function () {
+        console.log("Hola2");
+       }
+       
+       //Función anonima 
+       const saludar2 = () =>{
+        console.log("Hola3");
+       }
+
+       //Mas exprexsiva
+       const saludar3 = (nombre) => console.log(`Hola ${nombre}`);
+       saludar3('Andrés');
+
+       const saludar4 = nombre => console.log(`Hola ${nombre}`);
+       saludar3('Andrés Berdugo');
+
+       /*const sumar = function (a, b) {
+        return a + b;
+       }*/
+
+       const sumar = (a, b) => a + b;
+
+       console.log((sumar(9,8)));
+
+       const functionDeVariasLineas = () => {
+        console.log("uno");
+        console.log("dos");
+        console.log("tres");
+       }
+
+       functionDeVariasLineas();
+
+       const numeros = [1,2,3,4,5];
+
+       numeros.forEach(function(el, index){
+        console.log(`El elemento ${el} esta en la posición ${index}`);
+       })
+
+       numeros.forEach((el, index) => {
+        console.log(`El elemento ${el} esta en la posición ${index}`);
+       })
+
+       /*function Perro(){
+        console.log(this);
+       }
+
+       Perro();*/
+
+       const perro = {
+        nombre: "Kenai",
+        //mala practica
+        ladrar: ()=>{
+            console.log(this);
+        }
+       }
+
+       perro.ladrar();
+
+
+
+    </script>
+</body>
+</html>

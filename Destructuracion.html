@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numeros = [1,2,3];
+
+        //Sin destructuración
+        let uno = numeros[0],
+        dos = numeros[1],
+        tres = numeros[2];
+
+        console.log(uno, dos , tres);
+
+        //Con destructuración
+        const [one, two, three] = numeros
+        console.log(one, two, three);
+
+        const persona = {
+            nomber:"Jhon",
+            apellido:"Marstone",
+            edad:35
+        }
+
+        /*En la destructuración de objetos, es importante que la variable dinamica se llame igual que 
+        la propiedad del objeto*/
+        let {nombre, apellido, edad} = persona;
+        console.log(nombre, apellido, edad);
+    </script>
+</body>
+</html>

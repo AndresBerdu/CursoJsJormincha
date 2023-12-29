@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //POO
+        /*
+        Clases - Modelo a seguir
+        Objetos - Es una instancia de una clase 
+            Atributos - Es una caracteristica o propiedad del objeto 
+                (son variables dentro de un objeto) 
+            Métodos - son ñas acciones que un objeto puede realizar 
+                (son funciones dentro de un objeto)
+        */
+
+        const animal = {
+            nombre: "Snoppy",
+            sonar(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        }
+
+        const animal2 = {
+            nombre: "Lola Bunny",
+            sonar(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        }
+
+
+        console.log(animal);
+        console.log(animal2);
+
+        //Funcion constructora
+
+        /* V1 de función constructora 
+        function Animal(nombre, genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+
+            //Metodos
+            this.sonar = function(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+
+            this.saludar = function(){
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }*/
+
+        //Funcion constructora donde asignamos los métodos al Prototipo
+        //no a la funcion como tal
+        function Animal(nombre, genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+        
+        //Métodos agregados al prototipo de la función constructora
+        //Metodos
+        Animal.prototype.sonar = function(){
+            console.log("Hago sonidos por que estoy vivo");
+        }
+
+        Animal.prototype.saludar = function(){
+            console.log(`Hola me llamo ${this.nombre}`);
+        }
+
+        const snoppy = new Animal("Snoppy", "Macho");
+        const lolaBunny = new Animal("Lola Bunny", "Hembra");
+
+        console.log(snoppy);
+        console.log(lolaBunny);
+
+        snoppy.sonar();
+        snoppy.saludar();
+        
+        lolaBunny.sonar();
+        snoppy.saludar();
+    </script>
+</body>
+</html>

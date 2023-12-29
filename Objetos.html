@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = new String("Hola");
+        console.log(a);
+
+        const b = {}
+        console.log(b);
+
+        const c = new Object();
+        console.log(c);
+
+        /*dentro de un objeto a las variables se 
+        le van a llamar atributos/propiedades y a 
+        las funciones se les llama métodos*/
+
+        const Jhon = {
+            nombre:"Jhon",
+            apellido:"Marstone",
+            edad:35,
+            pasatiempos:["Correr", "Hacer Ejercicio", "Dar Clases"],
+            soltero:false,
+            contacto:{
+                email:"andres@gmail.com",
+                twitter:"@andres",
+                movil:"345123153145"
+            },
+            saludar: function(){
+                console.log("Hola :)");
+            },
+            devirMiNombre: function(){
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años
+                            y me puedessegui como ${this.contacto.twitter} en twitter`);
+            }
+        }
+
+        console.log(Jhon);
+        console.log(Jhon["nombre"]);
+        console.log(Jhon["apellido"]);
+        console.log(Jhon.nombre);
+        console.log(Jhon.apellido);
+        console.log(Jhon.edad);
+        console.log(Jhon.soltero);
+        console.log(Jhon.pasatiempos);
+        console.log(Jhon.pasatiempos[1]);
+        console.log(Jhon.contacto);
+        console.log(Jhon.contacto.twitter);
+        console.log(Jhon.saludar());
+        console.log(Jhon.devirMiNombre());
+
+        console.log(Object.keys(Jhon));
+        console.log(Object.values(Jhon));
+        console.log(Jhon.hasOwnProperty("nombre"));
+        console.log(Jhon.hasOwnProperty("nacimiento"));
+    </script>
+</body>
+</html>

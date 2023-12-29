@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        //Var se usa para ambito global
+        var hola = 'hola mundo';
+        //Let se usa para ambito de bloque
+        let hello = 'hello world';
+        console.log(hola);
+        console.log(hello);
+        console.log(window);
+
+        
+        //esto es un bloque--comentario de una linea
+        /*Esto
+        es
+        un 
+        comentario
+        de
+        varias 
+        lineas
+        */
+
+        //ambito global
+        ("***************var****************");
+        var musica = "Rock";
+        console.log("variable musica antes del bloque", musica);
+        {
+            var musica = "Pop";
+            console.log("variable musica dentro del bloque", musica);
+        }
+
+        console.log("variable musica después del bloque", musica);
+
+        //ambito de bloque 
+        let musica2 = "Rock";
+        ("***************let****************");
+        console.log("variable musica antes del bloque", musica2);
+        {
+            let musica2 = "Pop";
+            console.log("variable musica dentro del bloque", musica2);
+        }
+
+        console.log("variable musica después del bloque", musica2);
+    </script>
+</body>
+</html>

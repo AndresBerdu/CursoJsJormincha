@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*if - else*/
+
+        let edad = 17;
+
+        if(edad > 17){
+            console.log("Eres mayor de Edad");
+        } else {
+            console.log("Eres menor de Edad");
+        }
+
+        if(edad >= 18){
+            console.log("Eres mayor de Edad");
+        } else {
+            console.log("Eres menor de Edad");
+        }
+
+        if(edad < 18){
+            console.log("Eres mayor de Edad");
+        } else {
+            console.log("Eres menor de Edad");
+        }
+
+        if(edad <= 17){
+            console.log("Eres mayor de Edad");
+        } else {
+            console.log("Eres menor de Edad");
+        }
+
+        /*if -else if - else*/
+        
+        /*
+        Déjame Dormir 0hrs - 5hrs
+        Buenos dias 6hrs - 11hrs
+        Buenas tardes 12hrs - 18hrs
+        Buenas noches  19hrs - 23hrs
+        */
+        let hora = 5;
+
+        if(hora >= 0 && hora <= 5){
+            console.log("Déjame Dormir");
+        } else if(hora >= 6 && hora <= 11){
+            console.log("Buenos dias");
+        } else if(hora >= 12 && hora <= 18){
+            console.log("Buenos tardes");
+        } else {
+            console.log("Buenos noches");
+        }
+
+        if(hora > 0 && hora <= 6){
+            console.log("Déjame Dormir");
+        } else if(hora > 5 && hora < 12){
+            console.log("Buenos dias");
+        } else if(hora > 11 && hora < 19){
+            console.log("Buenos tardes");
+        } else {
+            console.log("Buenos noches");
+        }
+
+        /*Operador ternario (condición) ? verdadero : falsa*/
+        console.log("Operador Ternario");
+        let eresMayor = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+        console.log(eresMayor);
+
+        /* switch : case */
+        //Diferentes valores para una misma variable 
+
+        /*
+        Domingo - 0
+        Lunes - 1
+        Martes - 2
+        Miércoles - 3
+        Jueves -4 
+        Viernes - 5
+        Sábado - 6
+        */
+        let día = 5;
+
+        switch (día) {
+            case 0:
+                console.log("Domingo");
+                break;
+            case 1:
+                console.log("Lunes");
+                break;
+            case 2:
+                console.log("Martes");
+                break;
+            case 3:
+                console.log("Miércoles");
+                break;
+            case 4:
+                console.log("Jueves");
+                break; 
+            case 5:
+                console.log("Viernes");
+                break;
+            case 6:
+                console.log("Sábado");
+                break;
+            default:
+                console.log("El día no existe");
+                break;
+        }
+    </script>
+</body>
+</html>
