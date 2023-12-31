@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(console);
+        console.error("Esto es un erro");
+        console.warn("Esto es un aviso");
+        console.info("Esto es un mensaje informativo");
+
+        let nombre = "Jhon";
+        let apellido = "Marstone";
+        let edad = 35;
+
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(nombre, apellido, edad);
+        console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+
+        console.log(`Hola mi nombre es %s %s y tengo %d años`, nombre, apellido, edad);
+        console.clear();
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        console.clear();
+
+        console.group("Cursos de @jormincha en Youtube");
+        console.log("Cruso de JavaScript");
+        console.log("Curso de Node Js");
+        console.log("Cruso de PWAs");
+        console.log("Curso de Flexbox");
+        console.log("Curso de Diseño y Programación Web");
+        console.groupEnd();
+        cosole.clear();
+
+        console.log(console);
+        console.table(Object.entries(console));
+    </script>
+</body>
+</html>
