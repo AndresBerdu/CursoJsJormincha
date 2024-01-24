@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Cortocírcuito OR - cuando el valor de la izquierda en lla
+        expresión siempra pueda validar a true, es el valor que 
+        se cargará por defecto
+
+        Cortocírcuito AND - cuando el valor de la izquierda en 
+        la expresión siempre pueda validar a false, es el valor
+        que se cargará por defecto
+        */
+
+        function saludar(nombre){
+            nombre = nombre || "Desconocido"
+            console.log(`Hola ${nombre}`);
+        }
+
+        saludar("Andres");
+        saludar();
+        console.log("cadena" || "Valor de la derecha");
+        console.log(19  || "Valor de la derecha");
+        console.log(true  || "Valor de la derecha");
+        console.log([]  || "Valor de la derecha");
+        console.log({}  || "Valor de la derecha");
+        console.log(false  || "Valor de la derecha");
+        console.log(null  || "Valor de la derecha");
+        console.log(undefined  || "Valor de la derecha");
+        console.log(""  || "Valor de la derecha");
+        console.log(-2  || "Valor de la derecha");
+
+        console.log(false  && "Valor de la derecha");
+        console.log(null  && "Valor de la derecha");
+        console.log(undefined  && "Valor de la derecha");
+        console.log(""  && "Valor de la derecha");
+        console.log(-2  && "Valor de la derecha");
+        
+
+
+    </script>
+</body>
+</html>
