@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cadena = "lorem ipsum dolor sit amet consectetur lorem adipiscing elit nascetur et phasellus auctor, iaculis tempus quis nullam duis scelerisque nec semper lectus curae fringilla, aenean torquent varius habitant convallis aliquet curabitur nostra himenaeos dictumst."
+        let expReg = new RegExp("lorem", "ig");
+        let expReg2 = /lorem/ig;
+
+        console.log(expReg.test(cadena));
+        console.log(expReg.exec(cadena));
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+
+        
+    </script>
+</body>
+</html>
